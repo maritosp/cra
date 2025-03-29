@@ -41,63 +41,27 @@
             background-color: #21B04B;
             text-align: center;
             padding: 15px;
-            position: relative;
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 10px 0; /* Ajustado para el espacio vertical */
             font-size: 1.2em;
             padding: 10px 20px;
-            display: inline-block;
+            display: block; /* Cambiado para que se muestren como bloques */
         }
         nav a:hover {
             background-color: #FE9995;
             border-radius: 5px;
         }
-        /* Menú hamburguesa */
-        .hamburger {
-            display: block;
-            font-size: 2em;
-            cursor: pointer;
-            color: white;
-            position: absolute;
-            right: 20px;
-            top: 20px;
-        }
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
-            justify-content: center;
+            display: block; /* Cambiado para que los elementos se apilen verticalmente */
         }
         nav ul li {
             padding: 10px 15px;
-        }
-        /* Estilo para dispositivos móviles */
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav.active ul {
-                display: block;
-            }
-            nav a {
-                font-size: 1.5em;
-                padding: 15px;
-                width: 100%;
-                text-align: left;
-                background-color: #1F1F1F;
-            }
-            nav a:hover {
-                background-color: #FE9995;
-            }
-            .hamburger {
-                display: block;
-            }
         }
         .content {
             padding: 20px;
@@ -113,10 +77,34 @@
         }
         .social-icons a {
             margin: 0 10px;
+            text-decoration: none; /* Esto quita el subrayado */
         }
         .social-icons img {
             width: 40px;
             height: 40px;
+        }
+
+        /* Estilos específicos para dispositivos móviles */
+        @media (max-width: 768px) {
+            nav ul {
+                display: block; /* Aseguramos que en móviles se muestren de manera vertical */
+            }
+            nav a {
+                font-size: 1.5em; /* Aumentamos el tamaño del texto en dispositivos pequeños */
+                padding: 15px 20px; /* Espaciado adecuado para móviles */
+            }
+        }
+
+        /* Estilos específicos para la versión de escritorio */
+        @media (min-width: 769px) {
+            nav ul {
+                display: flex; /* Se muestran de manera horizontal */
+                justify-content: center;
+            }
+            nav a {
+                display: inline-block;
+                margin: 0 15px; /* Espaciado horizontal */
+            }
         }
     </style>
 </head>
@@ -129,7 +117,6 @@
     </header>
 
     <nav id="navbar">
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         <ul>
             <li><a href="talleres.html">Talleres</a></li>
             <li><a href="eventos.html">Eventos</a></li>
@@ -159,11 +146,5 @@
         <p>Dirección: Cervantes 2481 - Villa Devoto - CABA</p>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            var nav = document.getElementById("navbar");
-            nav.classList.toggle("active");
-        }
-    </script>
 </body>
 </html>
