@@ -4,89 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talleres - Centro Rincón de Amigos</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #1F1F1F;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        nav {
-            background-color: #21B04B;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .content {
-            padding: 20px;
-            text-align: center;
-        }
-        .taller {
-            background-color: #FE9995;
-            border-radius: 10px;
-            margin: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            max-width: 600px;
-            margin: 20px auto;
-        }
-        footer {
-            background-color: #1F1F1F;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Vincula el archivo CSS externo -->
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <!-- Encabezado -->
     <header>
-        <h1>Talleres del Centro Rincón de Amigos</h1>
+        <a href="index.html">
+            <img src="logo.png" alt="Centro Rincón de Amigos Logo" class="logo">
+            <h1>Centro Rincón de Amigos</h1>
+        </a>
     </header>
-    
-    <nav>
-        <a href="index.html">Bienvenida</a>
-        <a href="talleres.html">Talleres</a>
-        <a href="actividades.html">Actividades</a>
+
+    <!-- Barra de navegación -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="talleres.html">Talleres</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="salon.html">Salón</a></li>
+            <li><a href="convocatoria.html">Convocatoria</a></li>
+        </ul>
     </nav>
 
+    <!-- Contenido principal -->
     <div class="content">
-        <h2>Conoce nuestros talleres</h2>
+        <h2>Talleres Disponibles</h2>
+        <p>¡Únete a nuestros talleres y disfruta de una experiencia única en comunidad!</p>
 
         <div class="taller">
             <h3>Danza Contemporánea</h3>
-            <p>Explora tu creatividad y expresión corporal en nuestras clases de danza contemporánea. Todos los niveles son bienvenidos.</p>
-            <p>Horarios: Lunes y Miércoles - 18:00 a 20:00</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfH52vygwCKhzuxTU1vMa-5BqXMO0R2_Be4LZEzGyxwn1rJ8w/viewform" target="_blank">Inscribirse</a>
+            <p><strong>Días:</strong> Lunes y Miércoles</p>
+            <p><strong>Horario:</strong> 18:00 - 20:00</p>
+            <p>Un taller para desarrollar la creatividad y la expresión corporal. No importa tu nivel, ¡te esperamos!</p>
+            <a href="formulario-inscripcion.html">Inscribirse</a>
         </div>
 
         <div class="taller">
             <h3>Salsa y Bachata</h3>
-            <p>Diviértete aprendiendo salsa y bachata en un ambiente relajado y amigable. ¡Baila al ritmo de la música!</p>
-            <p>Horarios: Martes y Jueves - 19:00 a 21:00</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfH52vygwCKhzuxTU1vMa-5BqXMO0R2_Be4LZEzGyxwn1rJ8w/viewform" target="_blank">Inscribirse</a>
+            <p><strong>Días:</strong> Martes y Jueves</p>
+            <p><strong>Horario:</strong> 20:00 - 22:00</p>
+            <p>Aprende los ritmos latinos más populares en un ambiente relajado y divertido. ¡No necesitas experiencia previa!</p>
+            <a href="formulario-inscripcion.html">Inscribirse</a>
+        </div>
+
+        <div class="taller">
+            <h3>Tango</h3>
+            <p><strong>Días:</strong> Miércoles y Viernes</p>
+            <p><strong>Horario:</strong> 19:00 - 21:00</p>
+            <p>Sumérgete en la elegancia y el estilo del tango argentino. Un espacio para todas las edades.</p>
+            <a href="formulario-inscripcion.html">Inscribirse</a>
+        </div>
+
+        <div class="taller">
+            <h3>Teatro</h3>
+            <p><strong>Días:</strong> Lunes y Jueves</p>
+            <p><strong>Horario:</strong> 17:00 - 19:00</p>
+            <p>Desarrolla tus habilidades actorales en un ambiente creativo y divertido. ¡Exprésate y aprende con nosotros!</p>
+            <a href="formulario-inscripcion.html">Inscribirse</a>
         </div>
     </div>
 
+    <!-- Pie de página -->
     <footer>
-        <p>Contacto: WhatsApp: 11-5657-2275 | Instagram: <a href="https://www.instagram.com/centrorincondeamigos/" target="_blank">centrorincondeamigos</a></p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/centrorincondeamigos/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/541156572275" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61562706943114" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+        </div>
+        <p>Contacto: <a href="tel:+541156572275">11-5657-2275</a></p>
+        <p>Dirección: Cervantes 2481 - Villa Devoto - CABA</p>
     </footer>
 </body>
 </html>
