@@ -56,7 +56,7 @@ nav a {
     font-size: 1.2em;
     padding: 15px 20px;
     display: block;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
     border-radius: 5px;
     font-weight: 500;
 }
@@ -64,6 +64,7 @@ nav a {
 nav a:hover {
     background-color: #FE9995;
     color: #1F1F1F;
+    transform: scale(1.1);
 }
 
 nav ul {
@@ -128,22 +129,144 @@ footer {
         margin: 0 15px;
     }
 }
+
 .taller {
     background-color: #FE9995;
     border-radius: 8px;
     padding: 20px;
     margin: 15px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.taller:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .taller h3 {
     color: #1F1F1F;
-    font-size: 1.8em;
+    font-size: 2em; /* Aumentamos el tamaño del título */
     margin-bottom: 10px;
+    font-family: 'Dancing Script', cursive;
 }
 
 .taller p {
     font-size: 1.2em;
     color: #333;
     line-height: 1.6;
+}
+
+.taller a {
+    background-color: #1F1F1F;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.taller a:hover {
+    background-color: #21B04B;
+}
+/* Estilos para la página de Eventos */
+.eventos {
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.eventos h2 {
+    font-size: 2.5em;
+    color: #1F1F1F;
+    margin-bottom: 20px;
+}
+
+.eventos p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.evento {
+    background-color: #FE9995;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.evento h3 {
+    font-size: 2.2em;
+    color: #1F1F1F;
+    margin-bottom: 10px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.evento p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.flyer {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.btn {
+    background-color: #1F1F1F;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    display: inline-block;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #21B04B;
+}
+.boton-reserva {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #21B04B;  /* El color verde del logo */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.boton-reserva:hover {
+    background-color: #FE9995;  /* El color rosa del logo */
+}
+.boton-reserva {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #21B04B;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.boton-reserva:hover {
+    background-color: #FE9995;
 }
