@@ -51,5 +51,15 @@
             <p>Dirección: Cervantes 2481 - Villa Devoto - CABA</p>
         </div>
     </footer>
+    <script>
+        window.addEventListener("load", function () {
+            if (window.innerWidth <= 768) {
+                const seccion = document.querySelector(".content");
+                if (seccion) {
+                    seccion.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+        });
+    </script>
 </body>
 </html>
