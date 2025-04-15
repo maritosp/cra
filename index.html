@@ -29,8 +29,97 @@
 
     <!-- Contenido principal -->
     <div class="content">
-        <h2>¡Bienvenidos al Centro Rincón de Amigos!</h2>
-        <p>Un lugar lleno de vida y cultura, donde la comunidad se reúne para compartir experiencias, aprender y crecer juntos.</p>
+        <!-- Sección Hero -->
+        <section class="hero-section">
+            <h2>¡Bienvenidos al Centro Rincón de Amigos!</h2>
+            <p class="tagline">Un lugar lleno de vida y cultura, donde la comunidad se reúne para compartir experiencias, aprender y crecer juntos.</p>
+        </section>
+
+        <!-- Sección Historia -->
+        <section class="about-section">
+            <h2>Nuestra Historia</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>El Centro Rincón de Amigos nace como un espacio de encuentro y desarrollo cultural en el corazón de Villa Devoto. Fundado sobre los valores históricos de la Unión Cívica Radical, nos dedicamos a fomentar la cultura, el arte y la participación comunitaria.</p>
+                    <p>Desde nuestros inicios, hemos sido un punto de encuentro para vecinos y artistas, creando un ambiente donde la creatividad y el aprendizaje florecen naturalmente.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/centro-frente.jpg" alt="Frente del Centro Rincón de Amigos" class="featured-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Actividades -->
+        <section class="features-section">
+            <h2>¿Qué Ofrecemos?</h2>
+            <div class="features-grid">
+                <div class="feature-card" style="background-image: url('images/talleres-bg.jpg');">
+                    <div class="card-content">
+                        <h3>Talleres</h3>
+                        <p>Descubre nuestros talleres artísticos y culturales para todas las edades.</p>
+                        <a href="talleres.html" class="feature-link">Explorar talleres</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card" style="background-image: url('images/eventos-bg.jpg');">
+                    <div class="card-content">
+                        <h3>Eventos</h3>
+                        <p>Participa en nuestros eventos culturales, shows y encuentros comunitarios.</p>
+                        <a href="eventos.html" class="feature-link">Ver próximos eventos</a>
+                    </div>
+                </div>
+                
+                <div class="feature-card" style="background-image: url('images/salon-bg.jpg');">
+                    <div class="card-content">
+                        <h3>Espacio Cultural</h3>
+                        <p>Un lugar ideal para tus encuentros, celebraciones y actividades culturales.</p>
+                        <a href="salon.html" class="feature-link">Conocer el espacio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de Fotos -->
+        <section class="gallery-section">
+            <h2>Nuestro Espacio</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/salon-1.jpg" alt="Salón principal" loading="lazy">
+                    <p>Salón principal con capacidad para eventos</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/salon-2.jpg" alt="Espacio para talleres" loading="lazy">
+                    <p>Espacio acondicionado para talleres</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/salon-3.jpg" alt="Área de exposiciones" loading="lazy">
+                    <p>Área de exposiciones y muestras</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Objetivos -->
+        <section class="objectives-section">
+            <h2>Nuestros Objetivos</h2>
+            <div class="objectives-grid">
+                <div class="objective-card">
+                    <h3>Desarrollo Cultural</h3>
+                    <p>Promover el desarrollo cultural y artístico en nuestra comunidad, ofreciendo espacios de expresión y aprendizaje.</p>
+                </div>
+                <div class="objective-card">
+                    <h3>Integración Social</h3>
+                    <p>Fomentar la integración y participación de todos los vecinos, creando un ambiente inclusivo y acogedor.</p>
+                </div>
+                <div class="objective-card">
+                    <h3>Formación Artística</h3>
+                    <p>Brindar oportunidades de formación en diferentes disciplinas artísticas, accesibles para todas las edades.</p>
+                </div>
+                <div class="objective-card">
+                    <h3>Espacio Comunitario</h3>
+                    <p>Mantener un espacio vivo y dinámico donde la comunidad pueda reunirse, compartir y crecer juntos.</p>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- Pie de página -->
@@ -49,5 +138,30 @@
         <p>Contacto: <a href="tel:+541156572275">11-5657-2275</a></p>
         <p>Dirección: Cervantes 2481 - Villa Devoto - CABA</p>
     </footer>
+
+    <script>
+        window.addEventListener('load', function() {
+            // Scroll suave para todos los enlaces internos
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Scroll inicial a la sección de contenido
+            const contentSection = document.querySelector('.content');
+            if (contentSection) {
+                contentSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
 </body>
 </html>
