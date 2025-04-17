@@ -55,12 +55,25 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, #1F1F1F, #21B04B);
+    background: linear-gradient(135deg, #1F1F1F, #21B04B);
     color: white;
     text-align: center;
     padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     border-bottom: 5px solid #FE9995;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1));
+    pointer-events: none;
 }
 
 header a {
@@ -98,9 +111,31 @@ nav a {
     font-size: 1.2em;
     padding: 15px 20px;
     display: block;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    border-radius: 5px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
     font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: #FE9995;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: -1;
+}
+
+nav a:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 nav a:hover {
@@ -121,10 +156,91 @@ nav ul li {
 }
 
 .content {
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tagline {
+    font-size: 1.4em;
+    color: #333;
+    margin: 20px auto 40px;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, #ffffff, #f8f8f8);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(254, 153, 149, 0.2);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    border-color: #FE9995;
+}
+
+.feature-card h3 {
+    color: #1F1F1F;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.feature-card p {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.feature-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #21B04B, #1a8f3d);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.feature-link:hover {
+    background: linear-gradient(135deg, #1a8f3d, #21B04B);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    
+    .feature-card {
+        padding: 25px;
+    }
+    
+    .tagline {
+        font-size: 1.2em;
+        padding: 0 20px;
+    }
 }
 
 footer {
@@ -220,12 +336,14 @@ footer a {
 
 /* Estilos para los talleres */
 .taller {
-    background-color: #FE9995;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 15px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    background: linear-gradient(135deg, #FE9995, #ff8b85);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .taller:hover {
